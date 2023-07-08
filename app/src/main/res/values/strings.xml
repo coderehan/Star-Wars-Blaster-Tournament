@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flipkart Machine Coding Round</string>
+    <string name="points_table">Points Table</string>
+    <string name="matches">Matches</string>
+</resources>
