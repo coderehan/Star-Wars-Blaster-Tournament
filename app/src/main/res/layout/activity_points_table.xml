@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".fragments.StarWarsMatchesFragment">
+        tools:context=".activities.PointsTableActivity">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -27,11 +27,11 @@
 
                 <!--Main content goes here-->
                 <TextView
-                    android:id="@+id/tvMatches"
+                    android:id="@+id/tvPointsTable"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="@string/matches"
+                    android:text="@string/points_table"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -42,16 +42,16 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvStarWarsMatches"
+                    android:id="@+id/rvStarWarsPlayers"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tvMatches"
+                    app:layout_constraintTop_toBottomOf="@id/tvPointsTable"
                     app:layout_constraintVertical_bias="0.0"
-                    tools:listitem="@layout/adapter_star_wars_matches" />
+                    tools:listitem="@layout/adapter_star_wars_players" />
 
                 <com.github.ybq.android.spinkit.SpinKitView
                     android:id="@+id/progressBar"
