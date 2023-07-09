@@ -51,7 +51,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tvPointsTable"
                     app:layout_constraintVertical_bias="0.0"
-                    tools:listitem="@layout/adapter_star_wars_players" />
+                    tools:listitem="@layout/item_player" />
 
                 <com.github.ybq.android.spinkit.SpinKitView
                     android:id="@+id/progressBar"

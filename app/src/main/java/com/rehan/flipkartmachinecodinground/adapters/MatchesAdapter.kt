@@ -27,26 +27,26 @@ class MatchesAdapter : ListAdapter<Match, MatchesAdapter.MatchViewHolder>(MatchD
             val player1 = match.player1
             val player2 = match.player2
 
-            binding.tvPlayer1.text = player1.score.toString()
-            binding.tvPlayer2.text = player2.score.toString()
+            binding.tvPlayer1Score.text = player1.score.toString()
+            binding.tvPlayer2Score.text = player2.score.toString()
 
             // Set result colors based on match outcome
             if (player1.score > player2.score) {
-                binding.tvPlayer1.setTextColor(Color.GREEN)
-                binding.tvPlayer2.setTextColor(Color.RED)
+                binding.tvPlayer1Score.setTextColor(Color.GREEN)
+                binding.tvPlayer2Score.setTextColor(Color.RED)
             } else if (player1.score < player2.score) {
-                binding.tvPlayer1.setTextColor(Color.RED)
-                binding.tvPlayer2.setTextColor(Color.GREEN)
+                binding.tvPlayer1Score.setTextColor(Color.RED)
+                binding.tvPlayer2Score.setTextColor(Color.GREEN)
             } else {
-                binding.tvPlayer1.setTextColor(Color.WHITE)
-                binding.tvPlayer2.setTextColor(Color.WHITE)
+                binding.tvPlayer1Score.setTextColor(Color.BLACK)
+                binding.tvPlayer2Score.setTextColor(Color.BLACK)
             }
         }
     }
 
     class MatchDiffCallback : DiffUtil.ItemCallback<Match>() {
         override fun areItemsTheSame(oldItem: Match, newItem: Match): Boolean {
-            return oldItem.matchNumber == newItem.matchNumber
+            return oldItem.matchId == newItem.matchId
         }
 
         override fun areContentsTheSame(oldItem: Match, newItem: Match): Boolean {
